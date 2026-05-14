@@ -1,0 +1,19 @@
+-----------------------------------------------------------------------------------
+ABOUT ENTERPARAMETERS.TXT:
+-----------------------------------------------------------------------------------
+enterparameters.txt is the only input method you should need for basic applications
+
+You SHOULD write Naca, naca or NACA on every line start. This won't be fixed
+because eventually some other airfoil standards outside of NACA are to be added
+
+The file will be parsed expecting comma seperated values (12,ABC,53...)
+
+Position parameter is defined with respect to origin and YZ as the datum plane.
+However, you can add a "+" sign before the position numerical value to specify
+distance to last section. This is just a wrapper to take last position and add
+the distance, specifying a new workplane.
+
+Comments at the end of a line may cause unintended behaviour, please write
+comment and content lines seperately
+
+ 

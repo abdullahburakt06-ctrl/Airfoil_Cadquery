@@ -1,0 +1,7 @@
+SETRESOLUTION,50
+#NACA/ChordLength/Position/TwistAngleDegrees
+#--------------------------------------------------
+NACA2216,7,0,0
+NACA2214,5,5,0
+NACA1214,4,10,0
+NACA0014,3,15,0
