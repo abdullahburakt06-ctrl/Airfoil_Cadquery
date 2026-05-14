@@ -1,3 +1,9 @@
+This is, like my previous Gear Generator project, mostly a proof of concept for now.
+I intend to focus on their shortcomings after finals are over, hopefully in several
+months I will have implemented most of the changes I wish to implement
+
+cadquery, numpy and all other external libraries were installed via pip.
+
 -----------------------------------------------------------------------------------
 ABOUT ENTERPARAMETERS.TXT:
 -----------------------------------------------------------------------------------
