@@ -10,8 +10,8 @@ with open('enterparameters.csv', newline='') as csvfile:
     first_line = csvfile.readline().strip('\n')
     resolution = first_line.split(",")[1]
     resolution = int(resolution)
-    if resolution > 200:
-        RuntimeError("Do not go over 200 resolution in testing phase")
+    if resolution > 500:
+        RuntimeError("Do not go over 500 resolution, this is an arbitrary safeguard that you may change in source code")
     reader = csv.reader(csvfile)
     for row in reader: 
         i = 0
@@ -31,7 +31,8 @@ with open('enterparameters.csv', newline='') as csvfile:
             WingConstructor.append([pos, lastpos, twistAngle])
     csvfile.close()
 
-result = airfoilList(AirfoilDataset, WingConstructor, 0.3)
+result = airfoilList(AirfoilDataset, WingConstructor, 0.0, 0.0) 
+exporters.export(result, "wing.step")  #Write the full path to where you wish to export       
          
 
 
