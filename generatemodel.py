@@ -20,7 +20,8 @@ def airfoilList(afdata, wconstr, swept):
             twist = wconstr[i][2]
             print("debug" + str(i))
 
-            workplane_init.workplane(offset=pos).spline(xytuple, makeWire=True)
+            workplane_init.workplane().transformed((0, 0, twist), offset=(pos*swept, dihedral*pos, pos)).spline(xytuple, makeWire=True)
+           #15/5/2026 added twist and dihedral options. Set parameters in result=airfoilList(...)
 
         wing = workplane_init.loft(combine=True)
         show(wing)
