@@ -58,8 +58,14 @@ def naca4eq(nacastr, c, resolution):
     ylt = yl[::-1]
     xl = xlt
     yl = ylt
-    xset = numpy.concatenate((xu, xl), axis=0)
-    yset = numpy.concatenate((yu, yl), axis=0)
+
+    xset = xset - c/4 #so that an arbitrary center for rotation isnt at the front edge
+                      #no idea if the quarter of chord length is a good idea either, 
+                      #you can set the coefficient of c to whatever you'd like
+    
+    #xset = numpy.concatenate((xu, xl), axis=0)
+    #yset = numpy.concatenate((yu, yl), axis=0)
+    #DISABLED: It does not fix the trailing edge issue, commented out for now
     return [xset, yset]
 
 
