@@ -9,6 +9,11 @@ ABOUT ENTERPARAMETERS.TXT:
 -----------------------------------------------------------------------------------
 enterparameters.txt is the only input method you should need for basic applications
 
+I advise reading the source code to manipulate inputs better though. The code has had
+several additions after the enterparameters.txt structure was established and thus
+dihedral and sweep parameters are not within it. I plan to clean that up whenever
+possible but restructuring is time-consuming due to interdependent parts of the code.
+
 You SHOULD write Naca, naca or NACA on every line start. This won't be fixed
 because eventually some other airfoil standards outside of NACA are to be added
 
